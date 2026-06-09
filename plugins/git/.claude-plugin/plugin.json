@@ -1,0 +1,9 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "Pre-push hook that runs make verify before allowing git push",
+  "author": {
+    "name": "enxebre"
+  },
+  "keywords": ["git", "verify", "pre-push", "ci"]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-marketplace.json",
+  "name": "enxebre",
+  "version": "1.0.0",
+  "description": "Collection of Claude Code plugins for development workflows",
+  "owner": {
+    "name": "enxebre"
+  },
+  "plugins": [
+    {
+      "name": "git",
+      "source": "./plugins/git",
+      "strict": true
+    }
+  ]
+}
