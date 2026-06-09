@@ -1,14 +1,11 @@
 {
   "hooks": {
-    "PreToolUse": [
+    "SessionStart": [
       {
-        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
-            "if": "Bash(git push *)",
-            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/pre-push-verify.sh",
-            "timeout": 600
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/ensure-pre-push.sh"
           }
         ]
       }

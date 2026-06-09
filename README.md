@@ -22,7 +22,7 @@ Run `/reload-plugins` in an active session to apply changes.
 
 | Plugin | Description |
 |--------|-------------|
-| [git](plugins/git/) | Pre-push hook that runs `make verify` before allowing `git push` |
+| [git](plugins/git/) | Auto-installs pre-commit pre-push hooks at session start |
 
 ## Plugin Structure
 
