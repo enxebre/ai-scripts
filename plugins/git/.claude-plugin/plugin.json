@@ -1,7 +1,7 @@
 {
   "name": "git",
-  "version": "1.1.0",
-  "description": "SessionStart hook that ensures pre-commit pre-push hooks are installed",
+  "version": "1.2.0",
+  "description": "SessionStart hook that installs pre-commit and ensures pre-commit/pre-push hooks are active",
   "author": {
     "name": "enxebre"
   },
