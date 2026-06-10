@@ -1,15 +1,17 @@
 # Git Plugin
 
-Ensures pre-commit pre-push hooks are installed at session start.
+Ensures pre-commit hooks are active at session start.
 
 ## What It Does
 
-On `SessionStart`, the plugin checks if `.git/hooks/pre-push` exists. If the
-repo has a `.pre-commit-config.yaml` but the hook isn't installed, it runs
-`pre-commit install --hook-type pre-push` automatically.
+On `SessionStart`, the plugin checks for a `.pre-commit-config.yaml`. If found,
+it runs `pre-commit install --hook-type pre-commit` and
+`pre-commit install --hook-type pre-push` to activate all configured hooks.
 
-After that, every `git push` (from Claude or terminal) is gated by the
-pre-commit hooks defined in the repo — at zero ongoing token cost.
+If `pre-commit` is not installed, the session is blocked (exit code 2).
+
+After activation, every commit and push (from Claude or terminal) is gated by
+the hooks defined in the repo — at zero ongoing token cost.
 
 ## Installation
 
@@ -21,4 +23,4 @@ claude plugin install git@enxebre
 ## Prerequisites
 
 - `pre-commit` must be installed (`pip install pre-commit` or `brew install pre-commit`)
-- The repo needs a `.pre-commit-config.yaml` with pre-push stage hooks
+- The repo needs a `.pre-commit-config.yaml`

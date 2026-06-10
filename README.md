@@ -22,7 +22,7 @@ Run `/reload-plugins` in an active session to apply changes.
 
 | Plugin | Description |
 |--------|-------------|
-| [git](plugins/git/) | Auto-installs pre-commit pre-push hooks at session start |
+| [git](plugins/git/) | Ensures pre-commit hooks (pre-commit + pre-push) are active at session start |
 
 ## Plugin Structure
 
@@ -33,7 +33,7 @@ plugins/<name>/
 ├── .claude-plugin/
 │   └── plugin.json       # Plugin metadata (name, version, keywords)
 ├── hooks/
-│   └── hooks.json        # Hook definitions (PreToolUse, PostToolUse, etc.)
+│   └── hooks.json        # Hook definitions (SessionStart, PreToolUse, etc.)
 ├── scripts/              # Scripts referenced by hooks
 ├── CLAUDE.md             # Instructions injected into Claude context
 └── README.md
