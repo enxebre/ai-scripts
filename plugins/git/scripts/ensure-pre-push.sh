@@ -7,7 +7,7 @@ fi
 
 if ! command -v pre-commit &>/dev/null; then
   echo "ERROR: pre-commit is required but not found on PATH" >&2
-  exit 1
+  exit 2
 fi
 
 pre-commit install --hook-type pre-commit >&2
